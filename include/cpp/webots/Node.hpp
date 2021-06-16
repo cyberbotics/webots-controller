@@ -133,6 +133,10 @@ namespace webots {
     const double *getOrientation() const;
     const double *getPose() const;
     const double *getPose(const Node *fromNode) const;
+    void enablePoseTracking(int samplingPeriod) const;
+    void disablePoseTracking() const;
+    void enablePoseTracking(int samplingPeriod, const Node *fromNode) const;
+    void disablePoseTracking(const Node *fromNode) const;
     const double *getCenterOfMass() const;
     const double *getContactPoint(int index) const;
     Node *getContactPointNode(int index) const;
@@ -154,6 +158,8 @@ namespace webots {
 
     void saveState(const std::string &stateName);
     void loadState(const std::string &stateName);
+
+    void setJointPosition(double position, int index = 1);
 
     // DO NOT USE THESE FUNCTIONS: THEY ARE RESERVED FOR INTERNAL USE:
     static Node *findNode(WbNodeRef ref);

@@ -98,6 +98,7 @@ WbFieldRef wb_supervisor_node_get_proto_field(WbNodeRef node, const char *field_
 void wb_supervisor_node_remove(WbNodeRef node);
 void wb_supervisor_node_save_state(WbNodeRef node, const char *state_name);
 void wb_supervisor_node_load_state(WbNodeRef node, const char *state_name);
+void wb_supervisor_node_set_joint_position(WbNodeRef node, double position, int index);
 
 const char *wb_supervisor_node_get_def(WbNodeRef node);
 const char *wb_supervisor_node_get_type_name(WbNodeRef node);
@@ -128,6 +129,11 @@ void wb_supervisor_node_add_torque(WbNodeRef node, const double torque[3], bool 
 WbFieldType wb_supervisor_field_get_type(WbFieldRef field);
 const char *wb_supervisor_field_get_type_name(WbFieldRef field);
 int wb_supervisor_field_get_count(WbFieldRef field);
+
+void wb_supervisor_field_enable_sf_tracking(WbFieldRef field, int sampling_period);
+void wb_supervisor_field_disable_sf_tracking(WbFieldRef field);
+void wb_supervisor_node_enable_pose_tracking(WbNodeRef node, int sampling_period, WbNodeRef from_node);
+void wb_supervisor_node_disable_pose_tracking(WbNodeRef node, WbNodeRef from_node);
 
 bool wb_supervisor_field_get_sf_bool(WbFieldRef field);
 int wb_supervisor_field_get_sf_int32(WbFieldRef field);
