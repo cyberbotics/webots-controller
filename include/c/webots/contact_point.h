@@ -14,19 +14,12 @@
  * limitations under the License.
  */
 
-/*************************************************************************************/
-/* Description:  Common definition of the 'WbLidarPoint' for both the C and C++ APIs */
-/*************************************************************************************/
-
-#ifndef WB_LIDAR_POINT_H
-#define WB_LIDAR_POINT_H
+#ifndef WB_CONTACT_POINTS_H
+#define WB_CONTACT_POINTS_H
 
 typedef struct {
-  float x;
-  float y;
-  float z;
-  int layer_id;
-  float time;
-} WbLidarPoint;
+  double point[3];
+  int node_id;
+} WbContactPoint;
 
-#endif /* WB_LIDAR_POINT_H */
+#endif
