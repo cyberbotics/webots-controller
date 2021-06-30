@@ -12,31 +12,21 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef TOUCHSENSOR_HPP
-#define TOUCHSENSOR_HPP
+#ifndef ALTIMETER_HPP
+#define ALTIMETER_HPP
 
 #include <webots/Device.hpp>
 
 namespace webots {
-  class TouchSensor : public Device {
+  class Altimeter : public Device {
   public:
-    typedef enum { BUMPER = 0, FORCE, FORCE3D } Type;
-
-    explicit TouchSensor(const std::string &name) : Device(name) {}  // Use Robot::getTouchSensor() instead
-    virtual ~TouchSensor() {}
-
+    explicit Altimeter(const std::string &name) : Device(name) {}  // Use Robot::getAltimeter instead
+    virtual ~Altimeter() {}
     virtual void enable(int samplingPeriod);
     virtual void disable();
     int getSamplingPeriod() const;
-
     double getValue() const;
-    const double *getValues() const;
-
-    int getLookupTableSize() const;
-    const double *getLookupTable() const;
-
-    Type getType() const;
   };
 }  // namespace webots
 
-#endif  // TOUCHSENSOR_HPP
+#endif  // ALTIMETER_HPP
