@@ -1894,6 +1894,7 @@ class Node(_object):
     RANGE_FINDER = _controller.Node_RANGE_FINDER
     RECEIVER = _controller.Node_RECEIVER
     ROTATIONAL_MOTOR = _controller.Node_ROTATIONAL_MOTOR
+    SKIN = _controller.Node_SKIN
     SPEAKER = _controller.Node_SPEAKER
     TOUCH_SENSOR = _controller.Node_TOUCH_SENSOR
     BALL_JOINT = _controller.Node_BALL_JOINT
@@ -1922,7 +1923,6 @@ class Node(_object):
     ZOOM = _controller.Node_ZOOM
     MICROPHONE = _controller.Node_MICROPHONE
     RADIO = _controller.Node_RADIO
-    SKIN = _controller.Node_SKIN
 
     def remove(self):
         return _controller.Node_remove(self)
