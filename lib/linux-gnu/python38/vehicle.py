@@ -140,6 +140,10 @@ class Driver(controller.Supervisor):
             self.this = this
     __swig_destroy__ = _vehicle.delete_Driver
     __del__ = lambda self: None
+    if _newclass:
+        internalGetInstanceDriverIfFeasible = staticmethod(_vehicle.Driver_internalGetInstanceDriverIfFeasible)
+    else:
+        internalGetInstanceDriverIfFeasible = _vehicle.Driver_internalGetInstanceDriverIfFeasible
 
     def step(self):
         return _vehicle.Driver_step(self)
@@ -226,6 +230,10 @@ class Driver(controller.Supervisor):
         return _vehicle.Driver_getWipersMode(self)
 Driver_swigregister = _vehicle.Driver_swigregister
 Driver_swigregister(Driver)
+
+def Driver_internalGetInstanceDriverIfFeasible():
+    return _vehicle.Driver_internalGetInstanceDriverIfFeasible()
+Driver_internalGetInstanceDriverIfFeasible = _vehicle.Driver_internalGetInstanceDriverIfFeasible
 
 class Car(Driver):
     __swig_setmethods__ = {}
