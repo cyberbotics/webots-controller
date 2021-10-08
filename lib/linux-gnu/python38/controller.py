@@ -1099,6 +1099,9 @@ class GPS(Device):
     def getSpeed(self):
         return _controller.GPS_getSpeed(self)
 
+    def getSpeedVector(self):
+        return _controller.GPS_getSpeedVector(self)
+
     def getCoordinateSystem(self):
         return _controller.GPS_getCoordinateSystem(self)
     if _newclass:
