@@ -35,8 +35,6 @@ namespace webots {
     Driver();
     virtual ~Driver();
 
-    static Driver *internalGetInstanceDriverIfFeasible();
-
     virtual int step();
 
     // positive: turn right, negative: turn left
@@ -83,7 +81,6 @@ namespace webots {
 
   private:
     virtual int step(int t) { return Supervisor::step(t); }
-    static Driver *dInstance;
   };
 }  // namespace webots
 
