@@ -145,9 +145,9 @@ class Driver(controller.Supervisor):
     __swig_destroy__ = _vehicle.delete_Driver
     __del__ = lambda self: None
     if _newclass:
-        getInitialisationPossible = staticmethod(_vehicle.Driver_getInitialisationPossible)
+        isInitialisationPossible = staticmethod(_vehicle.Driver_isInitialisationPossible)
     else:
-        getInitialisationPossible = _vehicle.Driver_getInitialisationPossible
+        isInitialisationPossible = _vehicle.Driver_isInitialisationPossible
 
     def step(self):
         return _vehicle.Driver_step(self)
@@ -239,9 +239,9 @@ def Driver_getDriverInstance():
     return _vehicle.Driver_getDriverInstance()
 Driver_getDriverInstance = _vehicle.Driver_getDriverInstance
 
-def Driver_getInitialisationPossible():
-    return _vehicle.Driver_getInitialisationPossible()
-Driver_getInitialisationPossible = _vehicle.Driver_getInitialisationPossible
+def Driver_isInitialisationPossible():
+    return _vehicle.Driver_isInitialisationPossible()
+Driver_isInitialisationPossible = _vehicle.Driver_isInitialisationPossible
 
 class Car(Driver):
     __swig_setmethods__ = {}
