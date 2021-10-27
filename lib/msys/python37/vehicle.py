@@ -100,8 +100,8 @@ class Driver(controller.Supervisor):
     __swig_destroy__ = _vehicle.delete_Driver
 
     @staticmethod
-    def getInitialisationPossible():
-        return _vehicle.Driver_getInitialisationPossible()
+    def isInitialisationPossible():
+        return _vehicle.Driver_isInitialisationPossible()
 
     def step(self):
         return _vehicle.Driver_step(self)
@@ -193,8 +193,8 @@ _vehicle.Driver_swigregister(Driver)
 def Driver_getDriverInstance():
     return _vehicle.Driver_getDriverInstance()
 
-def Driver_getInitialisationPossible():
-    return _vehicle.Driver_getInitialisationPossible()
+def Driver_isInitialisationPossible():
+    return _vehicle.Driver_isInitialisationPossible()
 
 class Car(Driver):
     thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
