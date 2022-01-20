@@ -2575,10 +2575,6 @@ class Robot(_object):
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
-    if _newclass:
-        internalGetInstance = staticmethod(_controller.Robot_internalGetInstance)
-    else:
-        internalGetInstance = _controller.Robot_internalGetInstance
     __swig_destroy__ = _controller.delete_Robot
     __del__ = lambda self: None
 
@@ -2641,9 +2637,6 @@ class Robot(_object):
 
     def __internalGetDevice(self, name):
         return _controller.Robot___internalGetDevice(self, name)
-
-    def getType(self):
-        return _controller.Robot_getType(self)
 
     def batterySensorEnable(self, samplingPeriod):
         return _controller.Robot_batterySensorEnable(self, samplingPeriod)
@@ -2977,10 +2970,6 @@ class Robot(_object):
 Robot_swigregister = _controller.Robot_swigregister
 Robot_swigregister(Robot)
 
-def Robot_internalGetInstance():
-    return _controller.Robot_internalGetInstance()
-Robot_internalGetInstance = _controller.Robot_internalGetInstance
-
 def Robot_getDeviceFromTag(tag):
     return _controller.Robot_getDeviceFromTag(tag)
 Robot_getDeviceFromTag = _controller.Robot_getDeviceFromTag
@@ -3021,6 +3010,10 @@ class Supervisor(Robot):
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
+    if _newclass:
+        getSupervisorInstance = staticmethod(_controller.Supervisor_getSupervisorInstance)
+    else:
+        getSupervisorInstance = _controller.Supervisor_getSupervisorInstance
     __swig_destroy__ = _controller.delete_Supervisor
     __del__ = lambda self: None
 
@@ -3133,6 +3126,10 @@ class Supervisor(Robot):
         return _controller.Supervisor_movieGetStatus(self)
 Supervisor_swigregister = _controller.Supervisor_swigregister
 Supervisor_swigregister(Supervisor)
+
+def Supervisor_getSupervisorInstance():
+    return _controller.Supervisor_getSupervisorInstance()
+Supervisor_getSupervisorInstance = _controller.Supervisor_getSupervisorInstance
 
 # This file is compatible with both classic and new-style classes.
 
