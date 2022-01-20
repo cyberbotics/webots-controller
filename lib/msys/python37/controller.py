@@ -2099,10 +2099,6 @@ class Robot(object):
 
     def __init__(self):
         _controller.Robot_swiginit(self, _controller.new_Robot())
-
-    @staticmethod
-    def internalGetInstance():
-        return _controller.Robot_internalGetInstance()
     __swig_destroy__ = _controller.delete_Robot
 
     def step(self, duration):
@@ -2164,9 +2160,6 @@ class Robot(object):
 
     def __internalGetDevice(self, name):
         return _controller.Robot___internalGetDevice(self, name)
-
-    def getType(self):
-        return _controller.Robot_getType(self)
 
     def batterySensorEnable(self, samplingPeriod):
         return _controller.Robot_batterySensorEnable(self, samplingPeriod)
@@ -2501,9 +2494,6 @@ class Robot(object):
 # Register Robot in _controller:
 _controller.Robot_swigregister(Robot)
 
-def Robot_internalGetInstance():
-    return _controller.Robot_internalGetInstance()
-
 def Robot_getDeviceFromTag(tag):
     return _controller.Robot_getDeviceFromTag(tag)
 
@@ -2528,6 +2518,10 @@ class Supervisor(Robot):
 
     def __init__(self):
         _controller.Supervisor_swiginit(self, _controller.new_Supervisor())
+
+    @staticmethod
+    def getSupervisorInstance():
+        return _controller.Supervisor_getSupervisorInstance()
     __swig_destroy__ = _controller.delete_Supervisor
 
     def simulationQuit(self, status):
@@ -2640,6 +2634,9 @@ class Supervisor(Robot):
 
 # Register Supervisor in _controller:
 _controller.Supervisor_swigregister(Supervisor)
+
+def Supervisor_getSupervisorInstance():
+    return _controller.Supervisor_getSupervisorInstance()
 
 
 
