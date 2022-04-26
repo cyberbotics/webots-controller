@@ -245,32 +245,32 @@ class CameraRecognitionObject(object):
     colors = property(_controller.CameraRecognitionObject_colors_get, _controller.CameraRecognitionObject_colors_set)
     model = property(_controller.CameraRecognitionObject_model_get, _controller.CameraRecognitionObject_model_set)
 
-    def get_position(self):
-        return _controller.CameraRecognitionObject_get_position(self)
+    def getPosition(self):
+        return _controller.CameraRecognitionObject_getPosition(self)
 
-    def get_orientation(self):
-        return _controller.CameraRecognitionObject_get_orientation(self)
+    def getOrientation(self):
+        return _controller.CameraRecognitionObject_getOrientation(self)
 
-    def get_size(self):
-        return _controller.CameraRecognitionObject_get_size(self)
+    def getSize(self):
+        return _controller.CameraRecognitionObject_getSize(self)
 
-    def get_position_on_image(self):
-        return _controller.CameraRecognitionObject_get_position_on_image(self)
+    def getPositionOnImage(self):
+        return _controller.CameraRecognitionObject_getPositionOnImage(self)
 
-    def get_size_on_image(self):
-        return _controller.CameraRecognitionObject_get_size_on_image(self)
+    def getSizeOnImage(self):
+        return _controller.CameraRecognitionObject_getSizeOnImage(self)
 
-    def get_colors(self):
-        return _controller.CameraRecognitionObject_get_colors(self)
+    def getColors(self):
+        return _controller.CameraRecognitionObject_getColors(self)
 
-    def get_id(self):
-        return _controller.CameraRecognitionObject_get_id(self)
+    def getId(self):
+        return _controller.CameraRecognitionObject_getId(self)
 
-    def get_number_of_colors(self):
-        return _controller.CameraRecognitionObject_get_number_of_colors(self)
+    def getNumberOfColors(self):
+        return _controller.CameraRecognitionObject_getNumberOfColors(self)
 
-    def get_model(self):
-        return _controller.CameraRecognitionObject_get_model(self)
+    def getModel(self):
+        return _controller.CameraRecognitionObject_getModel(self)
 
     def __init__(self):
         _controller.CameraRecognitionObject_swiginit(self, _controller.new_CameraRecognitionObject())
@@ -1457,15 +1457,15 @@ class ContactPoint(object):
     point = property(_controller.ContactPoint_point_get, _controller.ContactPoint_point_set)
     node_id = property(_controller.ContactPoint_node_id_get, _controller.ContactPoint_node_id_set)
 
-    def get_point(self):
-        return _controller.ContactPoint_get_point(self)
+    def getPoint(self):
+        return _controller.ContactPoint_getPoint(self)
 
-    def get_node_id(self):
-        return _controller.ContactPoint_get_node_id(self)
+    def getNodeId(self):
+        return _controller.ContactPoint_getNodeId(self)
 
     @property
     def point(self):
-        return self.get_point()
+        return self.getPoint()
 
 
     def __init__(self):
