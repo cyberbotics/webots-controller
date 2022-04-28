@@ -1486,6 +1486,7 @@ class Node(object):
     BACKGROUND = _controller.Node_BACKGROUND
     BILLBOARD = _controller.Node_BILLBOARD
     BOX = _controller.Node_BOX
+    CAD_SHAPE = _controller.Node_CAD_SHAPE
     CAPSULE = _controller.Node_CAPSULE
     COLOR = _controller.Node_COLOR
     CONE = _controller.Node_CONE
