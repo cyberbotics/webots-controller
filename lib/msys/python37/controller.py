@@ -223,7 +223,7 @@ class Brake(Device):
             return self.__motor
     def getPositionSensor(self):
         try:
-            return self.instance
+            return self.__positionSensor
         except AttributeError:
             self.__positionSensor = Robot.internalGetDeviceFromTag(self.getPositionSensorTag())
             return self.__positionSensor
