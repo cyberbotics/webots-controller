@@ -859,20 +859,11 @@ class Field(object):
     def removeSF(self):
         return _controller.Field_removeSF(self)
 
-    def importMFNode(self, position, filename):
-        return _controller.Field_importMFNode(self, position, filename)
-
     def importMFNodeFromString(self, position, nodeString):
         return _controller.Field_importMFNodeFromString(self, position, nodeString)
 
-    def importSFNode(self, filename):
-        return _controller.Field_importSFNode(self, filename)
-
     def importSFNodeFromString(self, nodeString):
         return _controller.Field_importSFNodeFromString(self, nodeString)
-
-    def removeMFNode(self, position):
-        return _controller.Field_removeMFNode(self, position)
 
 # Register Field in _controller:
 _controller.Field_swigregister(Field)
